@@ -49,6 +49,7 @@ html {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 
+
 }
 
 .header {
@@ -230,4 +231,57 @@ span {
     margin: 2rem 0 3rem;
 
 
+}
+/* Service Section css  */
+.service{
+    margin: 10rem;
+}
+.service h2{
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.heading{
+    text-align: left;
+    font-size: 4.5rem;
+}
+.service-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-container .service-box{
+
+    flex: 1 1 30rem;
+    background: var(--snd--bg-color);
+    background-color: #262840;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    color: #fff;
+    text-align:center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.service-container .service-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+.service-box i{
+    font-size: 7rem;
+    color: #079317;
+    background: var(--snd-bf-color);
+
+}
+.service-box h3{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    background: var(--snd-bf-color);
+}
+.service-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    background: var(--snd-bf-color);
 }
