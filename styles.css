@@ -89,6 +89,27 @@ html {
     color: var(--main-color);
     display: none;
 }
+.point_about i {
+    font-size: 2rem; /* Adjust the size as needed */
+    animation: poniterIcon 4s ease-in-out infinite;
+    color: yellow;
+}
+
+@keyframes poniterIcon {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+}
 
 .home {
     display: flex;
@@ -126,7 +147,7 @@ span {
 }
 
 .home-img img {
-    width: 50vh;
+    width: 30vw;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -190,7 +211,9 @@ span {
     box-shadow: none;
 
 }
-
+.clicked-ic{
+    font-size: 10rem;
+}
 .about {
     display: flex;
     justify-content: center;
@@ -284,4 +307,164 @@ span {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
     background: var(--snd-bf-color);
+}
+
+
+
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 400px) {
+    .header {
+        padding: 1.5rem 2%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+        margin-left: 2rem;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .section {
+        padding: 6% 5% 2rem;
+        height: 100vh;
+    }
+  
+
+    .home-content {
+        overflow: hidden;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Adjust font size for smaller screens */
+    }
+
+    .home-img img {
+        width: 50%;
+    }
+
+    .social-media a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 2rem 1rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 6rem 5%;
+    }
+
+    .about-img img {
+        width: 50%;
+    }
+
+    .about-content {
+        padding: 0;
+        text-align: center;
+    }
+    .about h2{
+        line-height: 0.8rem;
+        font-size: small;
+    }
+
+    .service {
+        margin: 5rem 0;
+    }
+
+    .service-container .service-box {
+        flex:1 1 20%;
+    }
+
+    .service-box i {
+        font-size: 5rem;
+    }
+
+    .service-box h3,
+    .service-box p {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width:800px) {
+    .header {
+        padding: 1.5rem 2%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+        margin-left: 2rem;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .section {
+        padding: 6rem 5% 2rem;
+        height: 100vh;
+    }
+  
+
+    .home-content {
+        overflow: hidden;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Adjust font size for smaller screens */
+    }
+
+    .home-img img {
+        width: 50%;
+    }
+
+    .social-media a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 2rem 1rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 6rem 5%;
+    }
+
+    .about-img img {
+        width: 50%;
+    }
+
+    .about-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .service {
+        margin: 5rem 0;
+    }
+
+    .service-container .service-box {
+        flex:1 1 20%;
+    }
+
+    .service-box i {
+        font-size: 5rem;
+    }
+
+    .service-box h3,
+    .service-box p {
+        font-size: 1.4rem;
+    }
+    
 }
