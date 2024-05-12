@@ -310,13 +310,17 @@ span {
 }
 
 /* Porject css */
-
+.project{
+    background: var(--snd-bg-color);
+    margin-left: 10rem;
+}
 .project h2{
     margin-bottom: 4rem;
+    color: var(--text-color);
 }
 .project-container{
     display: grid;
-    grid-template-columns: repeat(3, .1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 
@@ -327,18 +331,19 @@ span {
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    display: flex;
+    display: flex;   
 }
 
 .project-box img{
-    width: 100%;
-    transition: .5s ease;
+    width: 20%;
+    border-radius: .4rem;
+    transition: 1s ease;
     opacity: 0.7;
 }
 .project-box:hover img{
     transform: scale(1.1);
 }
-.project-box .project-layer{
+/* .project-box .project-layer{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -347,23 +352,23 @@ span {
     background: linear-gradient(rgba(0,0,0,0.1),var(--main-color));
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
     transition: 0.5s ease;
-}
+} */
 
 .project-box:hover .project-layer{
     transform: translateY(0);
 }
 .project-layer h4{
     font-size: 3rem;
+    color: var(--text-color);
 }
 
-.project-layer p{
+.project-layer .project-layer p{
     font-size: 1.6rem;
     margin: 0.3rem 0 1rem;
 }
@@ -380,11 +385,80 @@ span {
 .project-layer a i{
     font-size: 2rem;
     color: var(--snd-bg-color);
+    
+}
+.project-layer p{
+    color: var(--text-color);
 }
 
+/* Contct css  */
+.contact h2{
+    margin-bottom: 3rem;
+font-size: xx-large;
+color: #fff;
+margin-left: 10rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--snd-bf-color);
+    background: whitesmoke;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
 
+/* Footer css */
 
-/* Adjustments for smaller screens */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bf-color);
+}
+.footer-text{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTopa:holver{
+    box-shadow: 0 0 .1rem var(--main-color);
+}
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--snd-bg-color);
+    background: var(--main-color);
+    border-radius: 0.2rem;
+}
+/* Adjustments for smaller screens
 @media only screen and (max-width: 400px) {
     .header {
         padding: 1.5rem 2%;
@@ -400,7 +474,7 @@ span {
     }
 
     .menu-icon {
-        display: block; /* Show the menu icon on smaller screens */
+        display: block; /* Show the menu icon on smaller screens 
     }
 
     .section {
@@ -411,11 +485,11 @@ span {
 
     .home-content {
         overflow: hidden;
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%;
     }
 
     .home-content h1 {
-        font-size: 4rem; /* Adjust font size for smaller screens */
+        font-size: 4rem;
     }
 
     .home-img img {
@@ -479,7 +553,7 @@ span {
     }
 
     .menu-icon {
-        display: block; /* Show the menu icon on smaller screens */
+        display: block;
     }
 
     .section {
@@ -490,11 +564,11 @@ span {
 
     .home-content {
         overflow: hidden;
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%; 
     }
 
     .home-content h1 {
-        font-size: 4rem; /* Adjust font size for smaller screens */
+        font-size: 4rem; 
     }
 
     .home-img img {
@@ -539,4 +613,4 @@ span {
         font-size: 1.4rem;
     }
     
-}
+} */
