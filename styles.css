@@ -459,6 +459,7 @@ margin-left: 10rem;
     border-radius: 0.2rem;
 }
 /* Adjustments for smaller screens
+
 @media only screen and (max-width: 400px) {
     .header {
         padding: 1.5rem 2%;
@@ -614,3 +615,29 @@ margin-left: 10rem;
     }
     
 } */
+
+/* progess bar css */
+
+#progress-bar {
+    height: 5px; /* Height of the progress bar */
+    width: 0;
+    position: fixed;
+    top: 60px; /* Adjust position below header */
+    left: 0;
+    z-index: 999;
+    background: linear-gradient(to right, 
+    #ff6347, #ff8c00, #ffd700, #32cd32, #4169e1, 
+    #8a2be2, #ff69b4, #1e90ff, #20b2aa, #b22222, 
+    #ff1493, #4682b4, #d2b48c, #ff4500, #800080, 
+    #00ced1, #00ffff, #7fffd4, #ff7f50, #778899); /* Gradient color */
+    background-size: 200% auto;
+    animation: progress 10s linear infinite;
+}
+@keyframes progress {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
