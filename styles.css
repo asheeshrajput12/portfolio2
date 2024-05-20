@@ -313,6 +313,8 @@ span {
 .project{
     background: var(--snd-bg-color);
     margin-left: 10rem;
+    margin-bottom: 5rem;
+    margin-right: 10rem;
 }
 .project h2{
     margin-bottom: 4rem;
@@ -328,7 +330,7 @@ span {
 
 .project-container .project-box{
     position: relative;
-    border-radius: 2rem;
+    border-radius: 0.2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;   
@@ -336,7 +338,8 @@ span {
 
 .project-box img{
     width: 20%;
-    border-radius: .4rem;
+    border-radius: .5rem;
+    padding: 0.2rem;
     transition: 1s ease;
     opacity: 0.7;
 }
@@ -372,6 +375,9 @@ span {
     font-size: 1.6rem;
     margin: 0.3rem 0 1rem;
 }
+.project-layer{
+    margin-left: 1rem;
+}
 .project-layer a{
     display: inline-flex;
     justify-content: center;
@@ -382,10 +388,14 @@ span {
     border-radius: 50%;
 
 }
-.project-layer a i{
+.project-layer i{
     font-size: 2rem;
-    color: var(--snd-bg-color);
+    margin-top: 1rem;
+    color: var(--text-color);
     
+}
+.project-layer i:hover{
+    cursor: pointer;
 }
 .project-layer p{
     color: var(--text-color);
