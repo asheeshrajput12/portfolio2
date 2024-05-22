@@ -1,4 +1,13 @@
 window.onscroll = function () { updateProgressBar() };
+/* =============================== typed js ===========================*/
+
+const typed = new Typed('multiple-text', {
+    strings: ['Android Developer', 'Web Designer', 'UI/UX Developer'],
+    typeSpeed: 70,
+    backSpeed: 70,
+    backDelay: 1000,
+    loop: true
+});
 
 function updateProgressBar() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -63,12 +72,3 @@ ScrollReveal().reveal('.home-img, .service-container,.project-box, .contact fprm
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-/* =============================== typed js ===========================*/
-
-const typed = new Typed('.multiple-text', {
-    strings: ['Android Developer', 'Web Designer', 'UI/UX Developer'],
-    typeSpeed: 70,
-    backSpeed: 70,
-    backDelay: 1000,
-    loop: true
-});
