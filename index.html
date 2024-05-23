@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+    <!-- Add other Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore-compat.js"></script>
+
     <!-- FONT AWSOME LIBRARY -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -104,62 +110,74 @@
     <section class="project" id="project">
         <h2 class="heading">My <span>Projects</span></h2>
         <div class="project-container">
-       
-        <div class="project-box">
-            <div class="project-layer">
-                <img src="/images/image.png" alt="">
-                <h4> Food delivhery app  <i class="fa-solid fa-up-right-from-square"></i></h4>
-                <p> The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++. For certain types of apps, this can help you reuse code libraries written in those languages.</p>
-            
-            </div>
-        </div>
 
-        <div class="project-box">
-          
-            <div class="project-layer">
-                <img src="/images/image.png" alt="">
-                <h4> Calcultor App  <i class="fa-solid fa-up-right-from-square"></i></h4>
-                <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++. For certain types of apps, this can help you reuse code libraries written in those languages.</p>
-            
-            </div>
-        </div>
-        <div class="project-box">
-           
-            <div class="project-layer">
-                <img src="/images/image.png" alt="">
-                <h4> Student registration  <i class="fa-solid fa-up-right-from-square"></i></h4>
-                <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++. For certain types of apps, this can help you reuse code libraries written in those languages.</p>
-              
-            </div>
-        </div>
+            <div class="project-box">
+                <div class="project-layer">
+                    <img src="/images/image.png" alt="">
+                    <h4> Food delivhery app <i class="fa-solid fa-up-right-from-square"></i></h4>
+                    <p> The Android NDK is a toolset that lets you implement parts of your app in native code, using
+                        languages such as C and C++. For certain types of apps, this can help you reuse code libraries
+                        written in those languages.</p>
 
-         <div class="project-box">
-            <div class="project-layer">
-            <img src="/images/image.png" alt="">
-                <h4> Alarm App  <i class="fa-solid fa-up-right-from-square"></i></h4>
-                <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++. For certain types of apps, this can help you reuse code libraries written in those languages.</p>
-               
+                </div>
             </div>
-         </div>
 
-         <div class="project-box">
-            <div class="project-layer">
-                <img src="/images/image.png" alt="">
-                <h4> Portfolio  <i class="fa-solid fa-up-right-from-square"></i></h4>
-                <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++. For certain types of apps, this can help you reuse code libraries written in those languages.</p>
-                
+            <div class="project-box">
+
+                <div class="project-layer">
+                    <img src="/images/image.png" alt="">
+                    <h4> Calcultor App <i class="fa-solid fa-up-right-from-square"></i></h4>
+                    <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using
+                        languages such as C and C++. For certain types of apps, this can help you reuse code libraries
+                        written in those languages.</p>
+
+                </div>
             </div>
-        </div>
-        <div class="project-box">
-            <div class="project-layer">
-                <img src="/images/image.png" alt="">
-                <h4> Food delivhery app  <i class="fa-solid fa-up-right-from-square"></i></h4>
-                <p> The Android NDK is a toolset that lets you implement parts of your app in native code, using languages such as C and C++. For certain types of apps, this can help you reuse code libraries written in those languages.</p>
-            
+            <div class="project-box">
+
+                <div class="project-layer">
+                    <img src="/images/image.png" alt="">
+                    <h4> Student registration <i class="fa-solid fa-up-right-from-square"></i></h4>
+                    <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using
+                        languages such as C and C++. For certain types of apps, this can help you reuse code libraries
+                        written in those languages.</p>
+
+                </div>
             </div>
+
+            <div class="project-box">
+                <div class="project-layer">
+                    <img src="/images/image.png" alt="">
+                    <h4> Alarm App <i class="fa-solid fa-up-right-from-square"></i></h4>
+                    <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using
+                        languages such as C and C++. For certain types of apps, this can help you reuse code libraries
+                        written in those languages.</p>
+
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-layer">
+                    <img src="/images/image.png" alt="">
+                    <h4> Portfolio <i class="fa-solid fa-up-right-from-square"></i></h4>
+                    <p>The Android NDK is a toolset that lets you implement parts of your app in native code, using
+                        languages such as C and C++. For certain types of apps, this can help you reuse code libraries
+                        written in those languages.</p>
+
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-layer">
+                    <img src="/images/image.png" alt="">
+                    <h4> Food delivhery app <i class="fa-solid fa-up-right-from-square"></i></h4>
+                    <p> The Android NDK is a toolset that lets you implement parts of your app in native code, using
+                        languages such as C and C++. For certain types of apps, this can help you reuse code libraries
+                        written in those languages.</p>
+
+                </div>
+            </div>
+
         </div>
-             
-    </div>
 
     </section>
 
@@ -176,8 +194,8 @@
                 <input type="text" placeholder="Email Subject" />
             </div>
             <textarea id="" name="" cols="30" rows="10" placeholder="Your Messege"></textarea>
-            <input type="button" name="Submit" value="Send Message" class="btn"/>
-        
+            <input type="button" name="Submit" value="Send Message" class="btn" />
+
         </form>
 
 
@@ -190,13 +208,82 @@
             <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </div>
     </footer>
+    <div id="data-container"></div>
 
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- MAIN JS  -->
     <script type="text/javascript" src="index.js"></script>
+    <!-- Include the Typed.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+        // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyD8_cGWbCDdxvb5J3q8xAez0HToYHcv03I",
+            authDomain: "portfolio-asheesh123.firebaseapp.com",
+            projectId: "portfolio-asheesh123",
+            storageBucket: "portfolio-asheesh123.appspot.com",
+            messagingSenderId: "725694812547",
+            appId: "1:725694812547:web:f9223a544d734f0abda6b6",
+            measurementId: "G-XLYM1RH4P1"
+        };
+        document.addEventListener('DOMContentLoaded', function() {
+            // Your web app's Firebase configuration
 
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            // Initialize Firestore
+            const db = firebase.firestore();
+
+            // Function to fetch and display data from Firestore
+            function fetchUserForm(userId) {
+                const dataContainer = document.getElementById('data-container');
+                const docRef = db.collection("userform").doc(userId);
+
+                docRef.get().then((doc) => {
+                    if (doc.exists) {
+                        const data = doc.data();
+                        dataContainer.innerHTML = `
+                            <p>Email: ${data.txt_email}</p>
+                            <p>Message: ${data.txt_message}</p>
+                            <p>Mobile: ${data.txt_mobile}</p>
+                            <p>Subject: ${data.txt_subject}</p>
+                            <p>Username: ${data.txt_username}</p>
+                        `;
+                    } else {
+                        dataContainer.innerHTML = `<p>No such document!</p>`;
+                    }
+                }).catch((error) => {
+                    console.error("Error getting document: ", error);
+                    dataContainer.innerHTML = `<p>Error getting document: ${error}</p>`;
+                });
+            }
+
+            // Call the fetchUserForm function to read from Firestore for a specific user
+            fetchUserForm('user1'); // Replace 'user1' with the actual user ID you want to fetch
+
+            // Initialize ScrollReveal
+            const sr = ScrollReveal({
+                distance: '80px',
+                duration: 2000,
+                delay: 100,
+                reset: true // Reset animations on scroll
+            });
+
+            sr.reveal('.home-content, .heading', { origin: 'top' });
+            sr.reveal('.home-img, .service-container, .project-box, .contact-form', { origin: 'bottom' });
+            sr.reveal('.home-content h1, .about-img', { origin: 'left' });
+            sr.reveal('.home-content p, .about-content', { origin: 'right' });
+        });
+    </script>
 </body>
 
 </html>

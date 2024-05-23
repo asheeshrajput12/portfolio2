@@ -1,12 +1,19 @@
+
+
+
 window.onscroll = function () { updateProgressBar() };
 /* =============================== typed js ===========================*/
 
-const typed = new Typed('multiple-text', {
-    strings: ['Android Developer', 'Web Designer', 'UI/UX Developer'],
-    typeSpeed: 70,
-    backSpeed: 70,
-    backDelay: 1000,
-    loop: true
+document.addEventListener('DOMContentLoaded', function() {
+    var options = {
+        strings: ['Android Developer', 'Web Designer', 'UI/UX Developer'],
+        typeSpeed: 70,
+        backSpeed: 70,
+        backDelay: 1000,
+        loop: true
+    };
+
+    var typed = new Typed('#multiple-text', options);
 });
 
 function updateProgressBar() {
@@ -71,4 +78,6 @@ ScrollReveal().reveal('.home-content, heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .service-container,.project-box, .contact fprm', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+
 
