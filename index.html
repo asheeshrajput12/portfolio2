@@ -17,6 +17,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- MAIN CSSS  -->
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with your correct User ID (Public Key)
+            emailjs.init("ccmGJayNOXibUUHOA"); // Replace with your EmailJS User ID (Public Key)
+        })();
+    </script> 
 </head>
 
 <body>
@@ -186,15 +194,15 @@
         <h2>Contact<span>Me</span></h2>
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Enter Name" />
-                <input type="email" placeholder="Email Address" />
+                <input type="text" id="username" placeholder="Enter Name" />
+                <input type="email" id="useremail" placeholder="Email Address" />
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile number" />
-                <input type="text" placeholder="Email Subject" />
+                <input type="number" id="mobile" placeholder="Mobile number" />
+                <input type="text" id="subject" placeholder="Email Subject" />
             </div>
-            <textarea id="" name="" cols="30" rows="10" placeholder="Your Messege"></textarea>
-            <input type="button" name="Submit" value="Send Message" class="btn" />
+            <textarea id="usermessage" name="" cols="30" rows="10" placeholder="Your Messege"></textarea>
+            <input type="button" name="Submit" id="sendButton" value="Send Message" class="btn"/>
 
         </form>
 
@@ -207,16 +215,20 @@
         <div class="footer-iconTop">
             <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </div>
+        <div id="data-container"></div>
     </footer>
-    <div id="data-container"></div>
+
 
     <!-- SCROLL REVEAL JS -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <!-- MAIN JS  -->
     <script type="text/javascript" src="index.js"></script>
-    <!-- Include the Typed.js library -->
+    <!-- Include the Typed.js library
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script type="module">
+
+    Include EmailJS SDK
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <!-- <script type="module">
         // Import the functions you need from the SDKs you need
         // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
         // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
@@ -234,7 +246,7 @@
             appId: "1:725694812547:web:f9223a544d734f0abda6b6",
             measurementId: "G-XLYM1RH4P1"
         };
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Your web app's Firebase configuration
 
             // Initialize Firebase
@@ -246,7 +258,7 @@
             // Function to fetch and display data from Firestore
             function fetchUserForm(userId) {
                 const dataContainer = document.getElementById('data-container');
-                const docRef = db.collection("userform").doc(userId);
+                const docRef = db.collection("user_form_submission").doc(userId);
 
                 docRef.get().then((doc) => {
                     if (doc.exists) {
@@ -268,22 +280,85 @@
             }
 
             // Call the fetchUserForm function to read from Firestore for a specific user
-            fetchUserForm('user1'); // Replace 'user1' with the actual user ID you want to fetch
+            fetchUserForm('fTXVRaPFKjR5rpcfV0s1'); // Replace 'user1' with the actual user ID you want to fetch
+            function sendMessage() {
+                const username = document.getElementById('username').value;
+                const email = document.getElementById('useremail').value;
+                const mobile = document.getElementById('mobile').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('usermessage').value;
 
-            // Initialize ScrollReveal
-            const sr = ScrollReveal({
-                distance: '80px',
-                duration: 2000,
-                delay: 100,
-                reset: true // Reset animations on scroll
+                if (username && email && mobile && subject && message) {
+                    db.collection("user_form_submission").doc(username).set({
+                        txt_username: username,
+                        txt_email: email,
+                        txt_mobile: mobile,
+                        txt_subject: subject,
+                        txt_message: message
+                    })
+                        .then(() => {
+                            alert("Message sent successfully!");
+                            // Optionally, clear the form
+                            document.querySelector('form').reset();
+                        })
+                        .catch((error) => {
+                            console.error("Error writing document: ", error);
+                            alert("Error sending message. Please try again.");
+                        });
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            }
+             // Add event listener to the button
+        document.getElementById('sendButton').addEventListener('click', sendMessage);
+                // Initialize ScrollReveal
+                const sr = ScrollReveal({
+                    distance: '80px',
+                    duration: 2000,
+                    delay: 100,
+                    reset: true // Reset animations on scroll
+                });
+
+                sr.reveal('.home-content, .heading', { origin: 'top' });
+                sr.reveal('.home-img, .service-container, .project-box, .contact-form', { origin: 'bottom' });
+                sr.reveal('.home-content h1, .about-img', { origin: 'left' });
+                sr.reveal('.home-content p, .about-content', { origin: 'right' });
             });
+    </script> -->
+    <!-- <script type="text/javascript">
+        function sendMessage() {
+            // Collect form data
+            const username = document.getElementById('username').value;
+            const useremail = document.getElementById('useremail').value;
+            const mobile = document.getElementById('mobile').value;
+            const subject = document.getElementById('subject').value;
+            const usermessage = document.getElementById('usermessage').value;
 
-            sr.reveal('.home-content, .heading', { origin: 'top' });
-            sr.reveal('.home-img, .service-container, .project-box, .contact-form', { origin: 'bottom' });
-            sr.reveal('.home-content h1, .about-img', { origin: 'left' });
-            sr.reveal('.home-content p, .about-content', { origin: 'right' });
-        });
-    </script>
+            // Check if all fields are filled
+            if (!username || !useremail || !mobile || !subject || !usermessage) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Create the email parameters
+            const emailParams = {
+                user_name: username,
+                user_email: useremail,
+                user_mobile: mobile,
+                email_subject: subject,
+                message: usermessage,
+            };
+
+            // Send the email using EmailJS
+            emailjs.send('service_bq7ifut', 'template_9jvbiyit', emailParams)
+                .then(function(response) {
+                    alert('SUCCESS! Your message has been sent.');
+                    document.getElementById('contact-form').reset(); // Reset the form
+                }, function(error) {
+                    alert('FAILED... ' + JSON.stringify(error));
+                });
+        }
+    </script> -->
 </body>
 
 </html>
