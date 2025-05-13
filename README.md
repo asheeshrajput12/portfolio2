@@ -45,9 +45,21 @@ A full-featured clone of the Indian Railways Unreserved Ticketing System (UTS) a
 - Kotlin 1.8+
 - Minimum SDK: 21 (Lollipop)
 
+---
+
+
+### 📄 License
+**This project is for educational purposes and is not affiliated with Indian Railways.**
+
+---
+
 ### Run Locally
 
 ```bash
 git clone https://github.com/your-username/mobile-uts-clone.git
 cd mobile-uts-clone
 open with Android Studio and run on an emulator or device
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
