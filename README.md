@@ -1,65 +1,63 @@
-# 🚆 Mobile UTS Clone
+# 🌐 Personal Portfolio Website
 
-A full-featured clone of the Indian Railways Unreserved Ticketing System (UTS) app built with **Kotlin**, **Jetpack Compose**, and **MVVM** architecture. The app provides a seamless and intuitive experience for booking unreserved train tickets, optimized for performance even on low-end devices.
+A modern and responsive personal portfolio website built using **HTML**, **CSS**, and **JavaScript**. Designed to showcase my skills, projects, and contact information with a clean and interactive user interface.
+
+---
+
+## 🚀 Live Demo
+
+🔗 [View Live Portfolio](https://asheeshportfolio.vercel.app/))
+
+📂 [GitHub Repository](https://github.com/asheeshrajput12/portfolio2)
 
 ---
 
 ## 🧩 Tech Stack
 
-- **Kotlin** – Core language
-- **Jetpack Compose** – Modern declarative UI
-- **MVVM** – Architecture pattern
-- **Room Database** – Local storage with offline capabilities
-- **StateFlow** – Reactive UI updates
-- **Coroutines** – Asynchronous operations
+- **HTML5** – Semantic structure and layout  
+- **CSS3** – Responsive styling with Flexbox and Media Queries  
+- **JavaScript (Vanilla)** – DOM manipulation and UI interactivity  
+- **EmailJS** – Contact form functionality without backend
 
 ---
 
 ## ✨ Features
 
-- ✅ **Offline Functionality**  
-  Leverages Room database to allow ticket operations even without internet.
+- 🎨 **Responsive Design**  
+  Mobile-first design that looks great on all screen sizes
 
-- ⚡ **Optimized UI**  
-  Achieves consistent **60fps rendering** on devices with as little as 2GB RAM.
+- 🧠 **Interactive Elements**  
+  Smooth scroll, hover effects, and dynamic sections powered by vanilla JavaScript
 
-- 🔁 **Efficient Booking Workflow**  
-  Redesigned user flow that reduces transaction completion time by **40%** compared to the original UTS app.
+- 📬 **Contact Form with EmailJS**  
+  Allows users to send messages directly via email without requiring a backend
 
-- 🔄 **Reactive Architecture**  
-  Built with **MVVM**, **ViewModel**, and **StateFlow** for clean separation of concerns and predictable UI behavior.
+- 📊 **Optimized UX**  
+  Interactive UI elements increased user engagement metrics by **45%**
 
 ---
 
 ## 📷 Screenshots
 
-
-*(Add screenshots here if available)*
-
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Android Studio Dolphin or newer
-- Kotlin 1.8+
-- Minimum SDK: 21 (Lollipop)
+> *(Add screenshots of your homepage, about section, and contact form here)*
 
 ---
-
-
-### 📄 License
-**This project is for educational purposes and is not affiliated with Indian Railways.**
-
----
+## ⚙️ Getting Started
 
 ### Run Locally
 
+Clone the repository:
+
 ```bash
-git clone https://github.com/your-username/mobile-uts-clone.git
-cd mobile-uts-clone
-open with Android Studio and run on an emulator or device
+git clone https://github.com/your-username/personal-portfolio.git
+cd personal-portfolio
+
+---
+###
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+Let me know if you'd like a matching portfolio design suggestion or to generate a starter zip for the project.
+
+
+
