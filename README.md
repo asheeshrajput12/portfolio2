@@ -6,7 +6,7 @@ A modern and responsive personal portfolio website built using **HTML**, **CSS**
 
 ## 🚀 Live Demo
 
-🔗 [View Live Portfolio](https://asheeshportfolio.vercel.app/))
+🔗 [View Live Portfolio](https://asheeshportfolio.vercel.app/)
 
 📂 [GitHub Repository](https://github.com/asheeshrajput12/portfolio2)
 
