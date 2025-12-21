@@ -1,0 +1,31 @@
+name: PR Checks (HTML CSS JS)
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install linters
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard eslint
+
+      - name: HTML validation
+        run: htmlhint "**/*.html"
+
+      - name: CSS validation
+        run: stylelint "**/*.css"
+
+      - name: JavaScript lint
+        run: eslint "**/*.js"
